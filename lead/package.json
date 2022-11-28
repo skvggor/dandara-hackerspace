@@ -14,11 +14,17 @@
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix"
   },
   "dependencies": {
+    "@nuxtjs/gtm": "^2.4.0",
+    "axios": "^1.2.0",
     "core-js": "^3.25.3",
+    "firebase": "8.10.1",
     "nuxt": "^2.15.8",
+    "uuidv4": "^6.2.13",
     "vue": "^2.7.10",
+    "vue-firestore": "^0.3.30",
     "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "vue-template-compiler": "^2.7.10",
+    "vue-the-mask": "^0.11.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
