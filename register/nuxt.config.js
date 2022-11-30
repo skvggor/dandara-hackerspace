@@ -23,7 +23,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: ''
+        content: 'Estamos organizando alguns cursos para estas férias (2022) e precisamos saber da comunidade quais os dias e horários, dentre os que temos disponíveis, são os mais interessantes. Os cursos serão "INTRODUÇÃO À ELETRÔNICA", "INTRODUÇÃO À PROGRAMAÇÃO", "HACKING, PENTESTING, SERVIDORES, ETC". Demonstre seu interesse aqui.'
       },
       {
         hid: 'robots',
@@ -43,12 +43,12 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: ''
+        content: 'Estamos organizando alguns cursos para estas férias (2022) e precisamos saber da comunidade quais os dias e horários, dentre os que temos disponíveis, são os mais interessantes. Os cursos serão "INTRODUÇÃO À ELETRÔNICA", "INTRODUÇÃO À PROGRAMAÇÃO", "HACKING, PENTESTING, SERVIDORES, ETC". Demonstre seu interesse aqui.'
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: ''
+        content: '/opengraph-image.png'
       },
       {
         hid: 'og:url',
@@ -68,12 +68,12 @@ export default {
       {
         hid: 'twitter:description',
         name: 'twitter:description',
-        content: ''
+        content: 'Estamos organizando alguns cursos para estas férias (2022) e precisamos saber da comunidade quais os dias e horários, dentre os que temos disponíveis, são os mais interessantes. Os cursos serão "INTRODUÇÃO À ELETRÔNICA", "INTRODUÇÃO À PROGRAMAÇÃO", "HACKING, PENTESTING, SERVIDORES, ETC". Demonstre seu interesse aqui.'
       },
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: ''
+        content: '/opengraph-image.png'
       }
     ],
     link: [
