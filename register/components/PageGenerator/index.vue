@@ -5,8 +5,8 @@
       :key="component.id"
       class="component"
     >
-      <LeadComponent
-        v-if="component.name === 'lead'"
+      <RegisterComponent
+        v-if="component.name === 'register'"
         :data="component"
       />
     </div>
@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import LeadComponent from '~/components/Lead'
+import RegisterComponent from '~/components/Register'
 
 export default {
   name: 'PageGenerator',
   components: {
-    LeadComponent,
+    RegisterComponent,
   },
   props: {
     data: {

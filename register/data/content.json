@@ -1,0 +1,13 @@
+{
+  "components": [
+    {
+      "id": 1,
+      "name": "register",
+      "title": "Dandara Hackerspace",
+      "subtitle": "Movimento Antirracista",
+      "text": "Estamos organizando alguns cursos para estas férias (2022) e precisamos saber da comunidade quais os dias e horários, dentre os que temos disponíveis, são os mais interessantes.",
+      "text2": "Os cursos serão \"INTRODUÇÃO À ELETRÔNICA\", \"INTRODUÇÃO À PROGRAMAÇÃO\", \"HACKING, PENTESTING, SERVIDORES, ETC\".",
+      "text3": "Demonstre seu interesse preenchendo os campos:"
+    }
+  ]
+}
