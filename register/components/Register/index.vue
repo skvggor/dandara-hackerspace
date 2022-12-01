@@ -42,6 +42,78 @@
           class="form"
           @submit.prevent="submit"
         >
+          <div class="checkbox">
+            <div class="checkbox-title">
+              <span>Escolha um curso ou mais:</span>
+            </div>
+
+            <div class="checkbox-line">
+              <input
+                id="eletronica"
+                v-model="curso"
+                type="checkbox"
+                value="Introdução à eletrônica"
+              >
+              <label for="eletronica">Introdução à eletrônica</label>
+            </div>
+
+            <div class="checkbox-line">
+              <input
+                id="programacao"
+                v-model="curso"
+                type="checkbox"
+                value="Introdução à programação"
+              >
+              <label for="programacao">Introdução à programação</label>
+            </div>
+
+            <div class="checkbox-line">
+              <input
+                id="hacking"
+                v-model="curso"
+                type="checkbox"
+                value="Hacking, pentesting, servidores, etc."
+              >
+              <label for="hacking">Hacking, pentesting, servidores, etc.</label>
+            </div>
+          </div>
+
+          <div class="checkbox">
+            <div class="checkbox-title">
+              <span>Escolha um dia/horário de interesse ou mais:</span>
+            </div>
+
+            <div class="checkbox-line">
+              <input
+                id="quinta"
+                v-model="horario"
+                type="checkbox"
+                value="Quinta-feira, 19h-21h"
+              >
+              <label for="quinta">Quinta-feira, 19h-21h</label>
+            </div>
+
+            <div class="checkbox-line">
+              <input
+                id="sabado1"
+                v-model="horario"
+                type="checkbox"
+                value="Sábado, 13h-15h"
+              >
+              <label for="sabado1">Sábado, 13h-15h</label>
+            </div>
+
+            <div class="checkbox-line">
+              <input
+                id="sabado2"
+                v-model="horario"
+                type="checkbox"
+                value="Sábado, 16h-18h"
+              >
+              <label for="sabado2">Sábado, 16h-18h</label>
+            </div>
+          </div>
+
           <input
             id="nome"
             v-model="nome"
@@ -60,29 +132,6 @@
             name="telefone"
             placeholder="Telefone"
           >
-
-          <select
-            id="horario"
-            v-model="horario"
-            class="dropdown"
-            name="horario"
-          >
-            <option
-              value=""
-              disabled
-            >
-              Dia/Horário de interesse
-            </option>
-            <option value="quinta-19-21">
-              Quinta-feira, 19h-21h
-            </option>
-            <option value="sabado-13-15">
-              Sábado, 13h-15h
-            </option>
-            <option value="sabado-16-18">
-              Sábado, 16h-18h
-            </option>
-          </select>
 
           <input
             id="bairro"
@@ -137,7 +186,8 @@ export default {
     return {
       nome: '',
       telefone: '',
-      horario: '',
+      curso: [],
+      horario: [],
       bairro: '',
       cidade: '',
       errors: [],
@@ -172,8 +222,12 @@ export default {
         errors.push('Telefone é obrigatório.')
       }
 
-      if (!this.horario) {
-        errors.push('Dia/Horário de interesse é obrigatório.')
+      if (!this.horario.length) {
+        errors.push('Dia/horário de interesse são obrigatórios.')
+      }
+
+      if (!this.curso.length) {
+        errors.push('Escolher pelo menos um curso é obrigatório.')
       }
 
       if (!this.bairro) {
@@ -196,6 +250,7 @@ export default {
         nome: this.nome,
         telefone: this.telefone,
         horario: this.horario,
+        curso: this.curso,
         bairro: this.bairro,
         cidade: this.cidade,
         createdAt: new Date().toLocaleString('pt-BR'),
@@ -360,6 +415,45 @@ export default {
   margin: 0 auto;
   max-width: 600px;
   width: 100%;
+}
+
+.checkbox {
+  margin: 0 0 20px;
+}
+
+.checkbox-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+input[type="checkbox"] {
+  height: 20px;
+  margin-right: 10px;
+  width: 20px;
+  border: 3px solid #333
+}
+
+.checkbox-title {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.checkbox:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.checkbox label {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 .form .input,
