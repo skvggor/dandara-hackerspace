@@ -22,6 +22,7 @@
     "uuidv4": "^6.2.13",
     "vue": "^2.7.10",
     "vue-firestore": "^0.3.30",
+    "vue-hacker-text": "^1.0.0",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
     "vue-the-mask": "^0.11.1"

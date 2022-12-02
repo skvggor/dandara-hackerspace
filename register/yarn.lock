@@ -9624,6 +9624,11 @@ vue-firestore@^0.3.30:
     firebase "^7.6.1"
     vue "^2.6.11"
 
+vue-hacker-text@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-hacker-text/-/vue-hacker-text-1.0.0.tgz#09155a496c1eb1f074bab944d5e2abbfd09b065a"
+  integrity sha512-z3pIaFoI+YtxkUdg1qMtp1S4Gs6OLLiVoWj2sHRN8L+pqh7sqBOTlNBjJOfM12MSpkWAEyW4Up5yGlhe+AcHVw==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"

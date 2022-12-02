@@ -6,7 +6,13 @@
   >
     <div class="content">
       <header class="header">
-        <h1 class="title">{{ data.title }}</h1>
+        <h1 class="title">
+          <vue-hacker-text
+            :text="data.title"
+            mode="stars"
+            speed="fast"
+          />
+        </h1>
         <h2 class="subtitle">{{ data.subtitle }}</h2>
         <p class="description">{{ data.text }}</p>
         <p class="description big">{{ data.text2 }}</p>
@@ -159,11 +165,18 @@
           </button>
         </form>
       </div>
+
+      <div class="footer">
+        <span class="address">
+          <span class="street">Local: {{ data.address }}</span> - <span class="city">{{ data.city }}</span> - <span class="state">{{ data.uf }}.</span>
+        </span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import VueHackerText from 'vue-hacker-text'
 import { uuid } from 'uuidv4'
 import Firebase from 'firebase/app'
 import { mask, type } from 'vue-the-mask'
@@ -172,6 +185,9 @@ require('firebase/firestore')
 
 export default {
   name: 'RegisterComponent',
+  components: {
+    VueHackerText,
+  },
   directives: {
     mask,
     type
@@ -214,20 +230,20 @@ export default {
     submit () {
       const errors = []
 
-      if (!this.nome) {
-        errors.push('Nome é obrigatório.')
-      }
-
-      if (!this.telefone) {
-        errors.push('Telefone é obrigatório.')
-      }
-
       if (!this.horario.length) {
         errors.push('Dia/horário de interesse são obrigatórios.')
       }
 
       if (!this.curso.length) {
         errors.push('Escolher pelo menos um curso é obrigatório.')
+      }
+
+      if (!this.nome) {
+        errors.push('Nome é obrigatório.')
+      }
+
+      if (!this.telefone) {
+        errors.push('Telefone é obrigatório.')
       }
 
       if (!this.bairro) {
@@ -278,10 +294,6 @@ export default {
 </script>
 
 <style>
-.register {
-  margin-bottom: 40px;
-}
-
 .header {
   margin-bottom: 40px;
 }
@@ -509,6 +521,22 @@ input[type="checkbox"] {
   .form .button {
     margin: 0 auto;
     max-width: 200px;
+  }
+}
+
+.address {
+  color: #f2b132;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+@media (min-width: 1024px) {
+  .address {
+    font-size: 24px;
   }
 }
 

@@ -103,13 +103,13 @@ img {
   position: relative;
   margin: 0 auto;
   max-width: 1440px;
-  padding: 20px;
+  padding: 20px 20px 0;
   z-index: 3;
 }
 
 @media (min-width: 1024px) {
   .home {
-    padding: 40px;
+    padding: 40px 40px 0;
   }
 }
 </style>
